@@ -18,14 +18,13 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "npm start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm build",
     "deploy": "gh-pages -d build",
-    "heroku-postbuild": "npm install"
-  },
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix reactFolderName && npm run build --prefix reactFolderName"  },
   "eslintConfig": {
     "extends": [
       "react-app",
